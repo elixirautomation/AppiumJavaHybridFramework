@@ -1,0 +1,28 @@
+2018-10-08 19:44:16 INFO  TestBase:54 - Running Tests On Android Platform.
+2018-10-08 19:44:31 INFO  TestBase:89 - Starting Android Driver.
+2018-10-08 19:44:33 INFO  MainPageTests:49 - Running Step: verify_all_main_page_elements_are_present()
+2018-10-08 19:44:33 INFO  MainPage:34 - Verifying Main Page Elements.
+2018-10-08 19:44:33 INFO  ReusableFunctions:136 - By.xpath: //android.widget.Button[@resource-id='com.example.android.prokabaddi:id/button_STackle']: element with class property displayed.
+2018-10-08 19:44:34 INFO  ReusableFunctions:136 - By.xpath: //android.widget.Button[@resource-id='com.example.android.prokabaddi:id/button_STackle_b']: element with class property displayed.
+2018-10-08 19:44:34 INFO  ReusableFunctions:136 - By.xpath: //android.widget.Button[@resource-id='com.example.android.prokabaddi:id/button_DRaid']: element with class property displayed.
+2018-10-08 19:44:34 INFO  ReusableFunctions:136 - By.xpath: //android.widget.Button[@resource-id='com.example.android.prokabaddi:id/button_DRaid']: element with class property displayed.
+2018-10-08 19:44:34 INFO  ReusableFunctions:136 - By.xpath: //android.widget.Button[@resource-id='com.example.android.prokabaddi:id/button_Touch']: element with class property displayed.
+2018-10-08 19:44:34 INFO  ReusableFunctions:136 - By.xpath: //android.widget.Button[@resource-id='com.example.android.prokabaddi:id/button_Touch_b']: element with class property displayed.
+2018-10-08 19:44:34 INFO  ReusableFunctions:136 - By.xpath: //android.widget.Button[@resource-id='com.example.android.prokabaddi:id/button_AllOut']: element with class property displayed.
+2018-10-08 19:44:34 INFO  ReusableFunctions:136 - By.xpath: //android.widget.Button[@resource-id='com.example.android.prokabaddi:id/button_AllOut_b']: element with class property displayed.
+2018-10-08 19:44:34 INFO  ReusableFunctions:136 - By.xpath: //android.widget.Button[@resource-id='com.example.android.prokabaddi:id/button_Bonus']: element with class property displayed.
+2018-10-08 19:44:34 INFO  ReusableFunctions:136 - By.xpath: //android.widget.Button[@resource-id='com.example.android.prokabaddi:id/button_Bonus_b']: element with class property displayed.
+2018-10-08 19:44:34 INFO  ReusableFunctions:136 - By.xpath: //android.widget.Button[@resource-id='com.example.android.prokabaddi:id/button_Tackle']: element with class property displayed.
+2018-10-08 19:44:34 INFO  ReusableFunctions:136 - By.xpath: //android.widget.Button[@resource-id='com.example.android.prokabaddi:id/button_Tackle_b']: element with class property displayed.
+2018-10-08 19:44:35 INFO  ReusableFunctions:136 - By.xpath: //android.widget.Button[@text='RESET']: element with class property displayed.
+2018-10-08 19:44:35 INFO  ReusableFunctions:136 - By.xpath: //android.widget.TextView[@resource-id='com.example.android.prokabaddi:id/team_a_score']: element with class property displayed.
+2018-10-08 19:44:35 INFO  ReusableFunctions:136 - By.xpath: //android.widget.TextView[@resource-id='com.example.android.prokabaddi:id/team_b_score']: element with class property displayed.
+2018-10-08 19:44:35 INFO  MainPage:55 - All Main Page Elements Displayed.
+2018-10-08 19:44:38 INFO  MainPageTests:59 - Running Step: verify_Super_Tackle_and_Reset_Functionality()
+2018-10-08 19:44:38 INFO  MainPage:72 - Verifying Super Tackle Functionality.
+2018-10-08 19:44:39 INFO  ReusableFunctions:193 - Clicking on element: By.xpath: //android.widget.Button[@resource-id='com.example.android.prokabaddi:id/button_STackle']
+2018-10-08 19:44:40 INFO  ReusableFunctions:250 - Getting Text From locator: 2
+2018-10-08 19:44:40 INFO  MainPage:77 - Super Tackle Point Displayed.
+2018-10-08 19:44:40 INFO  ReusableFunctions:193 - Clicking on element: By.xpath: //android.widget.Button[@text='RESET']
+2018-10-08 19:44:41 INFO  ReusableFunctions:250 - Getting Text From locator: 0
+2018-10-08 19:44:41 INFO  MainPage:82 - Reset functionality working fine.

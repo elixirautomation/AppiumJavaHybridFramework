@@ -7,6 +7,7 @@ import io.appium.java_client.MobileElement;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.File;
@@ -109,7 +110,7 @@ public class ReusableFunctions extends TestBase{
      * @param locator - parameter for element locator
      * @return - it returns the boolean value for element clickable condition
      */
-    private static boolean waitForElementClickable(By locator){
+    public static boolean waitForElementClickable(By locator){
         WebDriverWait wait = new WebDriverWait(driver, timeoutValue());
         boolean flag = true;
         try{
@@ -131,11 +132,10 @@ public class ReusableFunctions extends TestBase{
         boolean flag = true;
         try{
             for (By locator : arrayList){
-                MobileElement element = (MobileElement)driver.findElement(locator);
-                if (waitForElementVisible(element)){
-                    logger.info(element.getClass()+": element with class property displayed.");
+                if (waitForElementPresent(locator)){
+                    logger.info(locator.toString()+": element with class property displayed.");
                 }else{
-                    logger.error(element.getClass()+": element with class property isn't displayed.");
+                    logger.error(locator.toString()+": element with class property isn't displayed.");
                     flag=false;
                 }
             }
@@ -156,7 +156,7 @@ public class ReusableFunctions extends TestBase{
             if (waitForElementPresent(locator)) {
                 MobileElement element = (MobileElement)driver.findElement(locator);
                 element.sendKeys(value);
-                logger.info("Entering text to element: " + element.getClass());
+                logger.info("Entering text to element: " + locator.toString());
             }
         }catch(Exception Ex) {
             logger.error("Exception Occurred While Entering The Text: " + Ex.getMessage());
@@ -190,7 +190,26 @@ public class ReusableFunctions extends TestBase{
             if (waitForElementClickable(locator)){
                 MobileElement element = (MobileElement)driver.findElement(locator);
                 element.click();
-                logger.info("Clicking on element: " + element.getClass());
+                logger.info("Clicking on element: " + locator.toString());
+            }
+        }catch(Exception Ex) {
+            logger.error("Exception Occurred While Clicking The Element: " + Ex.getMessage());
+        }
+
+    }
+
+    /**
+     * This is a reusable method to move and click on mobile elements
+     * @param locator - parameter for element locator
+     */
+    public static void moveToElementAndClick(By locator, long timeout){
+        try{
+            if (waitForElementClickable(locator)){
+                MobileElement element = (MobileElement)driver.findElement(locator);
+                Actions action = new Actions(driver);
+                action.moveToElement(element).wait(timeout);
+                action.click();
+                logger.info("Clicking on element: " + locator.toString());
             }
         }catch(Exception Ex) {
             logger.error("Exception Occurred While Clicking The Element: " + Ex.getMessage());
